@@ -1,0 +1,101 @@
+NETWORK TRAFFIC ANALYSIS PROJECT - FINAL SECURITY ASSESSMENT
+Date: [2025/08/26]
+Time: [16:00]
+Analyst: [Azaldo Mazibuko]
+Session Duration: 4 minutes 50 seconds
+
+EXECUTIVE SUMMARY:
+Successfully completed comprehensive network traffic analysis using Wireshark and built-in Windows tools. 
+Monitored Wi-Fi interface for suspicious activity and established baseline of normal network behavior.
+
+TECHNICAL SPECIFICATIONS:
+- Capture Interface: Wi-Fi
+- Total Packets Captured: 10,884
+- Capture Duration: 4 minutes 50 seconds
+- Data Volume: 8.7 MB (8,352,974 bytes)
+- Average Traffic Rate: 37.5 packets/second
+- Packet Drop Rate: 0% (excellent capture quality)
+- Operating System: Windows 11 (24H2)
+
+TRAFFIC ANALYSIS RESULTS:
+
+1. PROTOCOL DISTRIBUTION:
+   - TCP: Primary protocol (encrypted HTTPS traffic)
+   - TLS: Secure web communications
+   - QUIC: Modern web protocols
+   - DNS: Name resolution queries
+
+2. CONNECTION PATTERNS:
+   - Internal IP: 10.0.0.101 (local machine)
+   - External Connections: Multiple HTTPS servers (ports 443)
+   - DNS Server: 10.0.0.254 (local network)
+   - No SSH traffic detected (port 22)
+
+3. TRAFFIC CHARACTERISTICS:
+   - Average packet size: 767 bytes
+   - Data rate: 28 KB/s average
+   - All sensitive traffic encrypted via TLS
+   - Normal web browsing patterns observed
+
+SECURITY ASSESSMENT:
+
+1. THREAT ANALYSIS:
+   - NO malicious activity detected
+   - NO suspicious connections identified
+   - NO unauthorized access attempts
+   - NO data exfiltration patterns
+
+2. NETWORK PERFORMANCE ISSUES:
+   - TCP retransmissions: 73 instances (network congestion)
+   - Out-of-order segments: 3 instances (minor)
+   - DNS retransmissions: 4 instances (DNS server response delays)
+   - Connection resets: 60 instances (normal cleanup)
+
+3. SECURITY POSTURE:
+   - EXCELLENT: All web traffic properly encrypted
+   - GOOD: No unencrypted HTTP traffic detected
+   - GOOD: Standard port usage (80, 443, 53)
+   - GOOD: No suspicious port scanning activity
+
+TOOLS AND TECHNIQUES USED:
+- Wireshark 4.4.8 for packet capture and analysis
+- Expert Information analysis for traffic assessment
+- Advanced filtering techniques for threat hunting
+- Built-in Windows network commands for system-level analysis
+- Manual traffic pattern recognition and analysis
+
+THREAT HUNTING RESULTS:
+- Applied filters: tcp.flags.reset, tcp.len > 1000, ip.src, dns, http
+- No suspicious patterns found in filtered traffic
+- All detected anomalies are performance-related, not security threats
+- Network behavior consistent with normal internet usage
+
+RECOMMENDATIONS:
+
+1. CONTINUOUS MONITORING:
+   - Establish regular network monitoring sessions
+   - Monitor for changes in traffic patterns
+   - Watch for new external connections
+
+2. PERFORMANCE OPTIMIZATION:
+   - Investigate DNS server response times
+   - Monitor network congestion during peak usage
+   - Consider network quality improvements
+
+3. SECURITY ENHANCEMENTS:
+   - Continue current security practices
+   - Monitor for new threat indicators
+   - Maintain encryption standards
+
+CONCLUSION:
+Network security assessment completed successfully. No security threats detected. 
+Network shows normal, secure web browsing activity with minor performance issues.
+All sensitive communications properly encrypted. System security posture: EXCELLENT.
+
+FUTURE MONITORING:
+- Repeat analysis monthly or when network behavior changes
+- Document any new traffic patterns
+- Monitor for emerging threat indicators
+- Maintain baseline of normal network activity
+
+END OF REPORT
